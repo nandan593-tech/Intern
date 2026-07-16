@@ -1,0 +1,33 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NumberGuessing game</title>
+ </head>
+ <body>
+    <script>
+        let max=100;
+        let min=1;
+        let Num=Math.floor(Math.random()*(max-min+1))+min;
+        let attempts;
+        let running=true;
+        while(running){
+            let guess=window.prompt(`Guess a number between ${min} and ${max}`);
+            if(guess<min || guess>max){
+                window.alert(`Please enter a number between ${min} and ${max}`);}
+                else if(guess<Num){
+                    window.alert(`TOO LOW!`);
+                }
+                else if(guess>Num){
+                    window.alert(`TOO HIGH!`);
+                }
+                else{
+                    window.alert(`CONGRATULATIONS! YOU GUESSED IT RIGHT!${Num}`);
+                   running=false; 
+                }
+             
+        }
+    </script>
+ </body>
+ </html>

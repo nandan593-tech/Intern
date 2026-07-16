@@ -1,0 +1,53 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <style>
+        #temp{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        </style>
+ </head>
+ <body>
+     <div id="temp">
+        <input type="number" id="tempInput" placeholder="Enter temperature">
+        <label for="cf">c ➡️f</label>
+        <input type="radio" name="cf" id="cf">
+        <label for="fc">f ➡️c</label>
+        <input type="radio" name="cf" id="fc">
+        <button id="convert">Convert</button>
+        <p id="result"></p>
+     </div>
+     <script> 
+        let tempInput=document.getElementById("tempInput");
+        let cf=document.getElementById("cf");
+        let fc=document.getElementById("fc");
+        let convert=document.getElementById("convert");
+        let result=document.getElementById("result");
+        convert.onclick=function(){
+            let temperature=parseFloat(tempInput.value);
+            if(isNaN(temperature)){
+                result.textContent="Please enter a valid number.";
+                return;
+            }
+            if(cf.checked){
+                let fahrenheit=(temperature*9/5)+32;
+                result.textContent=`${temperature}°C is equal to ${fahrenheit.toFixed(2)}°F`;
+            }
+            else if(fc.checked){
+                let celsius=(temperature-32)*5/9;
+                result.textContent=`${temperature}°F is equal to ${celsius.toFixed(2)}°C`;
+            }
+            else{
+                result.textContent="Please select a conversion type.";
+            }
+        }
+     </script>
+ </body>
+ </html>

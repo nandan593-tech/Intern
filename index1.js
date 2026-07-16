@@ -6,7 +6,10 @@ const resultHeading = document.getElementById('result');
     let em=email.indexOf('@');
     let ch=email.charAt(0);
     let re=email.repeat(2);
+    let fn=email.slice(0,email.indexOf('@'));
+   
     resultHeading.textContent=`${em}`;
     resultHeading.textContent=`${ch}`;
     resultHeading.textContent=`${re}`;
+    resultHeading.textContent=`${fn}`;
  }
