@@ -1,0 +1,76 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RandomPasswordGenerator</title>
+ </head>
+ <body>
+    <label for="passwordlength">EnterPasswordLength:</label>
+    <input id="passwordlength" type="number" min="1">
+    <label for="capitalLetter">capitalLetter</label>
+    <input id="capitalLetter" type="checkbox">
+    <label for="smallLetter">smallLetter</label>
+    <input id="smallLetter" type="checkbox">
+    <label for="symbols">Symbols</label>
+    <input id="symbols" type="checkbox">
+    <label for="numbers">Numbers</label>
+    <input id="numbers" type="checkbox">
+
+    <button type="button" id="submit">Submit</button>
+    <h1 id="result">Result is shown here</h1>
+    <script>
+    
+
+
+
+
+
+   
+    submit.onclick=function(){
+    const passwordlength=document.getElementById("passwordlength").value;
+    const result=document.getElementById("result");
+    const submit=document.getElementById("submit");
+    const cap=document.getElementById("capitalLetter");
+    const small=document.getElementById("smallLetter");
+    const sym=document.getElementById("symbols");
+    const num=document.getElementById("numbers");
+    let capitalLetters;
+    let random="";
+    let smallLetters;
+    let symbol;
+    let number;
+    let min=1;
+    let gp=[];
+
+     if(cap.checked)
+     {
+      capitalLetters="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      random=random+capitalLetters;
+     }
+     if(small.checked){
+      smallLetters="abcdefghijklmnopqrstuvwxyz"
+      random=random+smallLetters;
+     }
+     if(sym.checked){
+      symbol="!@#$%^&*";
+      random=random+symbol;
+     }
+     if(num.checked){
+      number=1234567890;
+      random=random+number;
+     }
+    for(i=0;i<passwordlength;i++){
+      randomNum=Math.floor(Math.random()*random.length);
+      gp.push(random[randomNum]);
+
+
+     }
+     result.textContent=`${gp}`;
+   }
+
+   
+
+    </script>
+ </body>
+ </html>
