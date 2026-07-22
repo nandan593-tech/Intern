@@ -1,0 +1,24 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter()</title>
+ </head>
+ <body>
+    <script>
+        let word=["Pushpa","sreevalli","mangalamseenu","jaalreddy","jakkareddy","mp","govindappa"];
+        const short=word.filter(shortl);
+        const long=word.filter(longL);
+        function shortl(element){
+            return element.length>=7;
+        }
+        function longL(element){
+            return element.length<7;
+        }
+        console.log(short);
+        console.log(long);
+
+    </script>
+ </body>
+ </html>
