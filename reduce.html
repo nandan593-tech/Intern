@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduuce()</title>
+</head>
+<body>
+    <script>
+        let nums=[30,50,40,20,2,100,120];
+        const maxi=nums.reduce(maximum);
+        const mini=nums.reduce(minimum);
+        console.log(maxi);
+        console.log(mini);
+        function maximum(accumulator,element){
+            return Math.max(accumulator,element);
+        }
+        function minimum(accumulator,element){
+            return Math.min(accumulator,element);
+        }
+    </script>
+</body>
+</html>
