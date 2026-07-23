@@ -1,0 +1,41 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+ </head>
+ <body>
+    <script>
+        class product{
+            constructor(name,price){
+                this.name=name;
+                this.price=price;
+            }
+            display(){
+                console.log(`Product:${this.name}`);
+                console.log(`Price:${this.price}`);
+                console.log(`TotalTax:${this.TotalTax}`);
+
+            }
+            calculate(salestax){
+               return this.TotalTax=(this.price*salestax)+this.price;
+
+            }
+
+        }
+        const salestax=0.05;
+        const product1=new product("SHIRT",500);
+        const product2=new product("pant",500);
+        const product3=new product("short",500);
+        product1.calculate(salestax);
+        product2.calculate(salestax);
+        product3.calculate(salestax);
+         product1.display();
+         product2.display();
+         product3.display();
+
+
+    </script>
+ </body>
+ </html>
