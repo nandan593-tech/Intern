@@ -1,0 +1,41 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INHERITANCE</title>
+ </head>
+ <body>
+    <script>
+    class animal{
+        eat(){
+            console.log(`The ${this.name} can eat`);
+
+        }
+        sleep(){
+            console.log(`The ${this.name} can sleep`);
+        }
+    } 
+    class dog extends animal{
+        name="chimtu Bhai";
+        run(){
+         console.log(`The ${this.name} can run`);
+
+        }
+    
+    } 
+    class cat extends animal{
+        name="chimnu";
+        rat(){
+        console.log(`The ${this.name} can eat rat`);
+
+        }
+
+    }
+    const dog1=new dog();
+    const cat1=new cat();
+     dog1.eat();
+     dog1.run();
+    </script>
+ </body>
+ </html>
