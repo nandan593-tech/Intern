@@ -1,0 +1,29 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONSTRUCTOR</title>
+ </head>
+ <body>
+    <script>
+        function movie(director,hero,producer,music){
+            this.director=director,
+            this.hero=hero,
+            this.producer=producer,
+            this.music=music,
+            this.intro=function(){
+                console.log(`The ${this.director} and ${this.hero} are doing film`);
+            }
+        };
+        const movie1=new movie("rajamouli","ramcharan","alluaravind","mmkeeravani");
+        const movie2=new movie("rajamouli","Nani","DOT","mmkeeravani");
+        const movie3=new movie("rajamouli","Ntr","DVV","mmkeeravani");
+        movie1.intro();
+        movie2.intro();
+        movie3.intro();
+
+
+    </script>
+ </body>
+ </html>
